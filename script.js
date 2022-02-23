@@ -16,6 +16,7 @@ function createGrid (rows = 16, columns = 16) { // Creates  default grid of 16x1
     }
     shadeCells();
 }
+
 createGrid();
 
 function newGrid (layout) { // Prompts user for input between 2 and 100 to create new grid of a different size
@@ -44,7 +45,7 @@ function shadeCells () { // Shades grid cells on mouseover
     })
 }
 
-function clearGrid () {
+function clearGrid () { // Resets current grid color for user to start fresh
     const cells = document.querySelectorAll('.cell');
 
     cells.forEach(cell => {
@@ -55,37 +56,3 @@ function clearGrid () {
 
 startButton.addEventListener('click', newGrid);
 clearButton.addEventListener('click', clearGrid);
-/*document.querySelectorAll('.cell').forEach(cell => cell.addEventListener("mouseover", () => {
-    redValue - 25.5;
-    greenValue - 25.5;
-    blueValue - 25.5;
-    cell.style.backgroundColor = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
-}));
-
-startButton.addEventListener('click', () => {
-    const cellCount = document.querySelectorAll('.cell');
-
-    for (i = 0; i < cellCount.length; i++) {
-        container.removeChild(cellCount[i]);
-    }
-
-    let layout;
-    let gridSize;
-
-    do {
-        layout = parseInt(prompt('How many columns and rows would you like to play? Pick between 12 and 100!'));
-        gridSize = layout * layout;
-    } while ((layout < 2 && Number) || (layout > 100 && Number));
-
-    container.style.gridTemplateColumns = `repeat(${layout}, 1fr)`;
-    container.style.gridTemplateRows = `repeat(${layout}, 1fr)`;
-
-    for (i = 0; i < gridSize; i++) {
-        gridCells = document.createElement('div');
-        gridCells.classList.add('cell');
-        gridCells.setAttribute('style', 'margin: 0; padding: 0; border: solid black 1px;')
-
-        container.appendChild(gridCells);
-    }
-    //document.querySelectorAll('.cell').forEach(cell => cell.addEventListener("mouseover", () => cell.style.backgroundColor = 'black'));
-});*/
