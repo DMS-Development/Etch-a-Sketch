@@ -5,9 +5,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-/** {
-    border: solid red 2px;
-}*/
 
 #header {
     display: flex;
@@ -29,12 +26,14 @@ button {
     border-radius: 10px;
     border: solid black 1px;
     box-shadow: 3px 3px;
+    overflow: hidden;
 }
 
 .gridContainer {
     margin: auto;
     height: 600px;
     width: 600px;
+    border: solid black 1px;
     display: grid;
     grid-template-columns: repeat(auto, 1fr);
 }
